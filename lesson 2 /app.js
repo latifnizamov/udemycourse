@@ -14,13 +14,13 @@ for (let i = 0; i < 2; i++){
     let a = prompt('Ввдеите обязательную статью расходов в этом месяце', ''),
         b = prompt('Во сколько обойдется ?', '');
     if ((typeof (a) )=== 'string' && (typeof(a)) != null && (typeof(b)) != null
-    && a != '' && b != '' && a.length < 50) {
+        && a != '' && b != '' && a.length < 50) {
         console.log('done');
         appData.expenses[a] = b;
     }else {
-        console.log('Заполните цифрами и не оставляете поля пустыми!');   
+        i = i - 1;
     }
-};
+}
 
 // let i = 0;
 // while (i < 2){
