@@ -62,10 +62,14 @@ let appData = {
         }
     },
     chooseIncome: function() {
-        let items = prompt('Что принесет дополнительный доход?(Перечислите через запятую)' , '');
-        appData.income = items.split(', ');
-        appData.income.push(prompt('Может что-то еще?'));
-        appData.income.sort();
+
+            let items = prompt('Что принесет дополнительный доход?(Перечислите через запятую)' , '');
+            appData.income = items.split(', ');
+            appData.income.push(prompt('Может что-то еще?'));
+            appData.income.sort();
+            while (!isNaN(items) || items == '' || items == null) {
+                items = prompt('Что принесет дополнительный доход?(Перечислите через запятую)' , '');
+            }
     }
 };
 
